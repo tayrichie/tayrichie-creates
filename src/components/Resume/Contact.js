@@ -16,16 +16,7 @@ export default class Experience extends Component {
                     >
                         Github
                     </StyledLink>
-                    {", "}
-                    <StyledLink
-                        href="https://twitter.com/_tayrichie"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Twitter
-                    </StyledLink>
-                    {", "}
-                    or{" "}
+                    {" or "}
                     <StyledLink
                         href="https://www.linkedin.com/in/tayrminda/"
                         target="_blank"

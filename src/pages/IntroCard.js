@@ -19,7 +19,7 @@ export default class IntroCard extends Component {
                                 className="svg-fill"
                                 fillRule="evenodd"
                                 fontFamily="Arima Madurai"
-                                fontSize="58"
+                                fontSize="50"
                                 fontWeight="bold"
                                 transform="translate(-40 -111)"
                             >
@@ -31,7 +31,7 @@ export default class IntroCard extends Component {
                     </StyledH1>
 
                     <p>
-                        I'm a developer consultant working remotely for{" "}
+                        I'm a Solutions Architect working remotely for{" "}
                         <StyledLink
                             href="https://www.deque.com"
                             target="_blank"
@@ -39,14 +39,14 @@ export default class IntroCard extends Component {
                         >
                             Deque Systems
                         </StyledLink>{" "}
-                        from Chattanooga, Tennessee. In the past five years,
-                        I've gone from strictly front-end development to a mix
-                        of front and back-end technologies, with a focus on
+                        from Chattanooga, Tennessee. Since I began developing,
+                        I've grown from strictly front-end development to a mix
+                        of front- and back-end technologies, with an emphasis on
                         accessibilty for all users.
                     </p>
                     <p>
                         Read my{" "}
-                        <StyledRouterLink to="/resume">Resume</StyledRouterLink>{" "}
+                        <StyledRouterLink to="/resume">resume</StyledRouterLink>{" "}
                         to learn more about my work experience.
                     </p>
                     <p>
@@ -58,16 +58,7 @@ export default class IntroCard extends Component {
                         >
                             Github
                         </StyledLink>
-                        {", "}
-                        <StyledLink
-                            href="https://twitter.com/_tayrichie"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Twitter
-                        </StyledLink>
-                        {", "}
-                        or{" "}
+                        {" or "}
                         <StyledLink
                             href="https://www.linkedin.com/in/tayrminda/"
                             target="_blank"
