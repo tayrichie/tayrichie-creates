@@ -23,6 +23,10 @@ const StyledH3 = styled.h3`
     & + p {
         margin-top: 0.3em;
     }
+
+    @media screen and (max-width: 600px) {
+        margin-top: 1rem;
+    }
 `;
 
 export { StyledH1, StyledH2, StyledH3 };
