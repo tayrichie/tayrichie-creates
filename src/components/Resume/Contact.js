@@ -24,7 +24,11 @@ export default class Experience extends Component {
                     >
                         LinkedIn
                     </StyledLink>
-                    .
+                    .<br />
+                    Other questions?{" "}
+                    <StyledLink href="mailto:inquire@tayrichie.tech">
+                        Send me an email.
+                    </StyledLink>
                 </ResumeCard>
             </ResumeSection>
         );
