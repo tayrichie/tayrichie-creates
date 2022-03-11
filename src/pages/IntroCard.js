@@ -70,9 +70,9 @@ export default class IntroCard extends Component {
                     </p>
                     <p>
                         Other questions?{" "}
-                        <a href="mailto:inquire@tayrichie.tech">
+                        <StyledLink href="mailto:inquire@tayrichie.tech">
                             Send me an email.
-                        </a>
+                        </StyledLink>
                     </p>
                 </Wrapper>
             </DocumentTitle>
