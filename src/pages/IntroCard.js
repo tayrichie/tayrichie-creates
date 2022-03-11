@@ -68,6 +68,12 @@ export default class IntroCard extends Component {
                         </StyledLink>
                         .
                     </p>
+                    <p>
+                        Other questions?{" "}
+                        <a href="mailto:inquire@tayrichie.tech">
+                            Send me an email.
+                        </a>
+                    </p>
                 </Wrapper>
             </DocumentTitle>
         );
