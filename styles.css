@@ -1,14 +1,35 @@
 @import url("https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@400;800&family=Work+Sans:ital,wght@0,400;1,400;1,600&display=swap");
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-primary: #428AFD;
+    --color-primary-dark: #0a3d8f;
+    --color-secondary: #5FAD56;
+    --color-secondary-dark: #2c5727;
+    --color-contrast-dark: #161616;
+    --color-contrast-light: #fff;
+    --color-alpha-primary: rgba(26, 169, 225, .2);
+    --color-alpha-primary-dark: rgba(10, 61, 143, .6);
+    --color-alpha-secondary: rgba(95, 173, 86, .25);
+    --color-alpha-neutral: rgba(161, 161, 161, 0.1);
+    color: var(--color-contrast-dark);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: #00e1ff;
+    --color-primary-dark: #008394;
+    --color-secondary: #7bf56d;
+    --color-secondary-dark: #177c0b;
+    --color-contrast-dark: #36203f;
+    --color-contrast-light: #dfdfdf;
+    --color-alpha-primary: rgba(0, 225, 255, .35);
+    --color-alpha-primary-dark: rgba(0, 164, 185, .6);
+    --color-alpha-secondary: rgba(123, 245, 109, .8);
+    --color-alpha-neutral: rgba(250, 250, 250, .15);
+    color: var(--color-contrast-light);
+  }
+}
 :root {
-  --color-primary: #428AFD;
-  --color-primary-dark: #0a3d8f;
-  --color-secondary: #5FAD56;
-  --color-secondary-dark: #2c5727;
-  --color-contrast-dark: #161616;
-  --color-alpha-primary: rgba(26, 169, 225, .2);
-  --color-alpha-primary-dark: rgba(10, 61, 143, .6);
-  --color-alpha-secondary: rgba(95, 173, 86, .25);
-  --color-alpha-neutral: rgba(161, 161, 161, 0.1);
   --type-serif: "Arima Madurai",cursive;
   --type-sans-serif: "Work Sans",sans-serif;
   --font-size-xl: 3.2rem;
@@ -26,16 +47,27 @@
   line-height: 1.5;
   letter-spacing: -1px;
   word-spacing: -0.5px;
-  color: var(--color-contrast-dark);
 }
 
 html {
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
 }
+@media (prefers-color-scheme: dark) {
+  html {
+    background-color: var(--color-contrast-dark);
+    color: var(--color-contrast-light);
+  }
+}
 
 body {
   margin: 0;
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--color-contrast-dark);
+    color: var(--color-contrast-light);
+  }
 }
 
 @-ms-viewport {
@@ -47,7 +79,7 @@ body {
   position: absolute;
   height: 100%;
   background-color: var(--color-primary);
-  z-index: -1;
+  z-index: 0;
 }
 
 .secondary-block, h1::after, h2::after {
@@ -56,7 +88,7 @@ body {
   position: absolute;
   height: 100%;
   background-color: var(--color-secondary);
-  z-index: -1;
+  z-index: 0;
 }
 
 .secondary-alpha-block, .skills > ul > li::after, .skills > ul > li::before, .edu section::after, .edu section::before {
@@ -65,7 +97,7 @@ body {
   position: absolute;
   height: 100%;
   background-color: var(--color-alpha-secondary);
-  z-index: -1;
+  z-index: 0;
 }
 
 .neutral-block, .experience .note::after {
@@ -74,7 +106,7 @@ body {
   position: absolute;
   height: 100%;
   background-color: var(--color-alpha-neutral);
-  z-index: -1;
+  z-index: 0;
 }
 
 h1, h2, h3, h4 {
@@ -86,8 +118,6 @@ h1, h2, h3, h4 {
 
 h1, h2 {
   position: relative;
-  color: var(--color-contrast-dark);
-  background-color: var(--color-alpha-secondary);
   padding: var(--spacer-xs) var(--spacer-sm);
 }
 @media screen and (min-width: 600px) {
@@ -110,6 +140,18 @@ h1, h2 {
     padding-left: calc(var(--spacer-md) + var(--spacer-xl));
   }
 }
+@media (prefers-color-scheme: light) {
+  h1, h2 {
+    color: var(--color-contrast-dark);
+    background-color: var(--color-alpha-secondary);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  h1, h2 {
+    color: var(--color-contrast-light);
+    background-color: var(--color-alpha-primary);
+  }
+}
 h1::before, h2::before {
   top: 0;
   left: 0;
@@ -126,6 +168,11 @@ h1 svg, h2 svg {
 @media screen and (min-width: 1400px) {
   h1 svg, h2 svg {
     max-width: 70vw;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  h1 svg, h2 svg {
+    fill: var(--color-contrast-light);
   }
 }
 h1 text, h1 tspan, h2 text, h2 tspan {
@@ -151,6 +198,11 @@ h3 {
   color: var(--color-contrast-dark);
   font-size: 1.1em;
   margin: var(--spacer-xs) var(--spacer-sm);
+}
+@media (prefers-color-scheme: dark) {
+  h3 {
+    color: var(--color-contrast-light);
+  }
 }
 @media screen and (min-width: 600px) {
   h3 {
@@ -409,6 +461,11 @@ a::after {
   .experience .note {
     font-size: 0.75em;
     padding: calc(var(--spacer-xs) / 3.5) 0;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .experience .note {
+    font-size: 0.7em;
   }
 }
 .experience .note::after {
