@@ -23,11 +23,11 @@
         --color-primary-dark: #008394;
         --color-secondary: #7bf56d;
         --color-secondary-dark: #177c0b;
-        --color-contrast-dark: #36203f;
+        --color-contrast-dark: #361147;
         --color-contrast-light: #dfdfdf;
         --color-alpha-primary: rgba(0, 225, 255, .35);
         --color-alpha-primary-dark: rgba(0, 164, 185, .6);
-        --color-alpha-secondary: rgba(123, 245, 109, .8);
+        --color-alpha-secondary: rgba(123, 245, 109, .7);
         --color-alpha-neutral: rgba(250, 250, 250, .15);
 
         color: var(--color-contrast-light);
@@ -517,21 +517,25 @@ a {
             height: 1.25rem;
             left: 0;
             top: 0;
-            border-bottom: 1px solid var(--color-alpha-secondary);
+            border-bottom: 2px solid var(--color-alpha-secondary);
         }
 
         &::after {
             @extend .secondary-alpha-block;
             width: 2px;
-            height: calc(100% - var(--spacer-sm) / 2);
-            left: .5rem;
-            top: calc(var(--spacer-sm) / 2);
+            height: calc(100% - var(--spacer-sm) / 1.4);
+            left: var(--spacer-xs);
+            top: calc(var(--spacer-sm) / 1.4);
         }
     }
 
     p:not(.note) {
         margin-top: calc(var(--spacer-xs) / 2);
         font-size: .825em;
+
+        @media screen and (min-width: 900px){
+            font-size: .75em;
+        }
     }
 
     h4 {
@@ -575,15 +579,15 @@ a {
                 height: 1.25rem;
                 left: 0;
                 top: 0;
-                border-bottom: 1px solid var(--color-alpha-secondary);
+                border-bottom: 2px solid var(--color-alpha-secondary);
             }
 
             &::after {
                 @extend .secondary-alpha-block;
                 width: 2px;
-                height: calc(100% - var(--spacer-sm) / 2);
-                left: .5rem;
-                top: calc(var(--spacer-sm) / 2);
+                height: calc(100% - var(--spacer-sm) / 1.4);
+                left: var(--spacer-xs);
+                top: calc(var(--spacer-sm) / 1.4);
             }
         }
 
