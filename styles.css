@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@400;800&family=Work+Sans:ital,wght@0,400;1,400;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@400;800&family=Work+Sans:ital,wght@0,400;0,500;1,400;1,500;1,600&display=swap");
 @media (prefers-color-scheme: light) {
   :root {
     --color-primary: #428AFD;
@@ -10,7 +10,7 @@
     --color-alpha-primary: rgba(26, 169, 225, .2);
     --color-alpha-primary-dark: rgba(10, 61, 143, .6);
     --color-alpha-secondary: rgba(95, 173, 86, .25);
-    --color-alpha-neutral: rgba(161, 161, 161, 0.1);
+    --color-alpha-neutral: rgba(161, 161, 161, 0.2);
     color: var(--color-contrast-dark);
   }
 }
@@ -428,6 +428,7 @@ a::after {
   background-color: var(--color-alpha-secondary);
   padding: var(--spacer-xs);
   font-size: 0.65em;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1.1px;
 }
@@ -455,6 +456,7 @@ a::after {
   margin: 0;
   font-style: italic;
   font-size: 0.8em;
+  font-weight: 500;
   line-height: 1;
 }
 @media screen and (min-width: 900px) {
@@ -516,6 +518,7 @@ a::after {
 }
 .edu p:not(.note) {
   margin-top: calc(var(--spacer-xs) / 2);
+  font-weight: 400;
   font-size: 0.825em;
 }
 @media screen and (min-width: 900px) {
@@ -593,7 +596,13 @@ a::after {
   background-color: var(--color-alpha-neutral);
   text-transform: uppercase;
   font-size: 0.65em;
+  font-weight: 500;
   letter-spacing: 0.875px;
+}
+@media (prefers-color-scheme: light) {
+  .skills > ul > li > ul > li {
+    border: 0.5px solid var(--color-alpha-primary-dark);
+  }
 }
 @media screen and (min-width: 900px) {
   .skills > ul > li > ul > li {
@@ -629,6 +638,11 @@ a::after {
   .contact > div {
     margin-left: calc(var(--spacer-md) + var(--spacer-xl));
     margin-right: calc(var(--spacer-md) + var(--spacer-xl));
+  }
+}
+@media (prefers-color-scheme: light) {
+  .contact a {
+    color: var(--color-secondary-dark);
   }
 }
 
