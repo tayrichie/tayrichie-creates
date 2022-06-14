@@ -1,7 +1,7 @@
 {
     "name": "tayrichie.github.io",
-    "version": "4.0.0",
-    "homepage": "http://tayrichie.github.io/",
+    "version": "4.1.0",
+    "homepage": "https://www.tayrichie.tech/",
     "scripts": {
         "styles": "sass ./css/styles.scss ./css/styles.css"
     },
