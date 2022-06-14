@@ -16,7 +16,7 @@
   --type-serif: "Arima Madurai", cursive;
   --type-sans-serif: "Work Sans", sans-serif;
 
-  --font-size-xl: 3.2rem;
+  --font-size-xl: 4.5rem;
   --font-size-lg: 3.2rem;
   --font-size-md: 2.4rem;
   --font-size-sm: 1.5rem;
@@ -66,40 +66,24 @@ h4 {
   line-height: 1;
 }
 
-h1,
-h2 {
-  position: relative;
-
-  svg {
-    margin: 0;
-    fill: var(--color-secondary-dark);
-
-    @media screen and (min-width: 1400px) {
-      max-width: 70vw;
-    }
-  }
-
-  text,
-  tspan {
-    margin: 0;
-    padding: 0;
-    line-height: 1;
-  }
-}
-
 h1 {
-  font-size: var(--font-size-xl);
-  line-height: 0.5;
+  font-size: var(--font-size-md);
+  letter-spacing: -2px;
+  color: var(--color-secondary-dark);
+
+  @media screen and (min-width: 900px){
+    font-size: var(--font-size-lg);
+  }
+
+  @media screen and (min-width: 1400px){
+    font-size: var(--font-size-xl);
+  }
 }
 
 h2 {
   font-size: var(--font-size-sm);
   color: var(--color-secondary-dark);
   line-height: 1.5;
-
-  @media screen and (min-width: 1400px) {
-    font-size: var(--spacer-sm);
-  }
 }
 
 h3 {
@@ -129,6 +113,7 @@ a {
 .content {
   padding: var(--spacer-xs);
   box-sizing: border-box;
+  margin-bottom: var(--spacer-sm);
 
   @media screen and (min-width: 1400px) {
     padding: var(--spacer-lg);
@@ -139,7 +124,11 @@ a {
   }
 
   & > section + section {
-    margin-top: var(--spacer-lg);
+    margin-top: var(--spacer-md);
+
+    @media screen and (min-width: 900px) {
+      margin-top: var(--spacer-lg);
+    }
 
     @media screen and (min-width: 1400px) {
       margin-top: var(--spacer-xl);
@@ -362,10 +351,6 @@ a {
     margin: 0;
     margin-top: var(--spacer-xs);
     padding: 0;
-
-    @media screen and (min-width: 1400px) {
-      padding-right: var(--spacer-sm);
-    }
 
     & > li {
       display: inline-block;
