@@ -1,0 +1,12 @@
+{
+    "name": "tayrichie.tech",
+    "private": true,
+    "version": "4.2.0",
+    "homepage": "https://www.tayrichie.tech/",
+    "scripts": {
+        "styles": "sass ./css/styles.scss ./css/styles.css"
+    },
+    "devDependencies": {
+        "sass": "^1.49.9"
+    }
+}
